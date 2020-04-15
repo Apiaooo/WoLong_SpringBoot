@@ -1,0 +1,24 @@
+spring:
+  datasource:
+#    url: jdbc:mysql://47.115.143.135:3306/Wolong?serverTimezone=UTC
+    url: jdbc:mysql://localhost:3306/Wolong?serverTimezone=UTC
+    username: Wolong
+#    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    #打印sql
+    show-sql: true
+    #格式化sql
+    properties:
+      hibernate:
+        format_sql: true
+  mvc:
+    #url访问图片的路径为localhost:8181/image/***
+    static-path-pattern: /image/**
+  resources:
+    #图片存放的真实路径
+#    static-locations: file:D://JavaTest/wolongspringboot/src/main/resources/static/upload/
+    static-locations: file:/www/wwwroot/Wolong/image/
+server:
+    port: 8080
